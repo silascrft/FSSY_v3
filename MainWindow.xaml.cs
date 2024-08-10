@@ -35,7 +35,7 @@ public partial class MainWindow : Window
         this.WindowState = WindowState.Minimized;
     }
 
-    private void ExitButton(object sender, RoutedEventArgs e)
+    public void ExitButton(object sender, RoutedEventArgs e)
     {
         this.Close();
     }

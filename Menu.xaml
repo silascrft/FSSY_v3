@@ -25,7 +25,8 @@
                     <TextBlock>Synchronize</TextBlock>
                 </Button>
                 <Button
-                    Style="{StaticResource MenuButton}">
+                    Style="{StaticResource MenuButton}"
+                    Click="SynchronizeAndPlayButton">
                     <TextBlock>Synchronize &amp; Play</TextBlock>
                 </Button>
                 <Button
@@ -33,6 +34,12 @@
                     Click="PathsButton">
                     <TextBlock>Paths</TextBlock>
                 </Button>
+                <Button
+                    Style="{StaticResource MenuButton}"
+                        Click="ExitButton">
+                    <TextBlock>Exit</TextBlock>
+                </Button>
+
             </StackPanel>
         </Grid>
 

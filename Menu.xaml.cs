@@ -29,6 +29,12 @@ public partial class Menu : Page
             mainWindow.NavigateToPathPage();
         }
 
+        private void ExitButton(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Window.GetWindow(this);
+        mainWindow.ExitButton(sender,e);
+        }
+
         public void SaveOnClose(object sender, System.ComponentModel.CancelEventArgs e)
         {
             SaveCheckBoxStates();
@@ -91,12 +97,128 @@ public partial class Menu : Page
         {
             const string exePath = @"C:\Program Files\FreeFileSync\FreeFileSync.exe";
             const string savegamePath1 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath2 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath3 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath4 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath5 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath6 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath7 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath8 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath9 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath10 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath11 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath12 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath13 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath14 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath15 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath16 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath17 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath18 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath19 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
+            const string savegamePath20 = @"C:\Users\Silas\Documents\FreeFile Synch Batch Files\FS22Savames\FS22_savegame1_GoogleDrive3_BatchRun.ffs_batch";
 
-            if (CheckBox1.IsChecked == true)
+        if (CheckBox1.IsChecked == true)
             {
                 var arguments = $"\"{savegamePath1}\"";
                 Process.Start(exePath, arguments);
             }
+        if (CheckBox2.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath2}\"";
+            Process.Start(exePath, arguments);
         }
+        if (CheckBox3.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath3}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox4.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath4}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox5.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath5}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox6.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath6}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox7.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath7}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox8.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath8}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox9.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath9}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox10.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath10}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox11.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath11}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox12.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath12}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox13.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath13}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox14.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath14}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox15.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath15}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox16.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath16}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox17.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath17}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox18.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath18}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox19.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath19}\"";
+            Process.Start(exePath, arguments);
+        }
+        if (CheckBox20.IsChecked == true)
+        {
+            var arguments = $"\"{savegamePath20}\"";
+            Process.Start(exePath, arguments);
+        }
+
+
+    }
 
 }
