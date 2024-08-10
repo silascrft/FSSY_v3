@@ -13,8 +13,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Page Remove="Styles\Styles.xaml" />
-      <Resource Include="Styles\Styles.xaml" />
       <None Remove="Assets\Buttons\Paths\PathsDefault.png" />
       <Resource Include="Assets\Buttons\Paths\PathsDefault.png" />
       <None Remove="Assets\Buttons\Paths\PathsHover.png" />
