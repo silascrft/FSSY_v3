@@ -1,0 +1,70 @@
+﻿<Page x:Class="FSSY_v3.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FSSY_v3"
+      mc:Ignorable="d"
+      Title="Menu" Height="600" Width="1000">
+    <Grid>
+
+        <!-- Background -->
+        <Image Source="/Assets/MainFullRes.png" />
+
+        <!-- Menu Buttons -->
+        <Grid Height="450" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <StackPanel VerticalAlignment="Center">
+                <Button
+                    Style="{StaticResource MenuButton}"
+                    Click="PlayButton">
+                    <TextBlock>Play</TextBlock>
+                </Button>
+                <Button
+                    Style="{StaticResource MenuButton}"
+                    Click="RunTickedPaths">
+                    <TextBlock>Synchronize</TextBlock>
+                </Button>
+                <Button
+                    Style="{StaticResource MenuButton}">
+                    <TextBlock>Synchronize &amp; Play</TextBlock>
+                </Button>
+                <Button
+                    Style="{StaticResource MenuButton}"
+                    Click="PathsButton">
+                    <TextBlock>Paths</TextBlock>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <!-- Checkboxes -->
+        <Grid Height="600" Width="600" HorizontalAlignment="Right">
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600">
+
+                <!-- Grid Column Layout -->
+                <UniformGrid Columns="5" VerticalAlignment="Stretch" Height="560" Width="580">
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox1" Content="1"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox2" Content="2"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox3" Content="3"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox4" Content="4"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox5" Content="5"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox6" Content="6"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox7" Content="7"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox8" Content="8"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox9" Content="9"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox10" Content="10"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox11" Content="11"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox12" Content="12"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox13" Content="13"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox14" Content="14"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox15" Content="15"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox16" Content="16"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox17" Content="17"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox18" Content="18"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox19" Content="19"/>
+                    <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox20" Content="20"/>
+                </UniformGrid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

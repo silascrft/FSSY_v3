@@ -1,0 +1,39 @@
+﻿<Page x:Class="FSSY_v3.Paths"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FSSY_v3"
+      mc:Ignorable="d"
+      Title="Paths" Height="600" Width="1000">
+    <Grid>
+      <Image Source="/Assets/BackgroundClean.png"/>
+      <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <UniformGrid x:Name="PathsGrid" Columns="5" VerticalAlignment="Bottom" Width="962" Height="562">
+                <local:PathGridItem PathNumber="1" PathText="Pfad/zur/batch1"/>
+                <local:PathGridItem PathNumber="2" PathText="Pfad/zur/batch2"/>
+                <local:PathGridItem PathNumber="3" PathText="Pfad/zur/batch3"/>
+                <local:PathGridItem PathNumber="4" PathText="Pfad/zur/batch4"/>
+                <local:PathGridItem PathNumber="5" PathText="Pfad/zur/batch5"/>
+                <local:PathGridItem PathNumber="6" PathText="Pfad/zur/batch6"/>
+                <local:PathGridItem PathNumber="7" PathText="Pfad/zur/batch7"/>
+                <local:PathGridItem PathNumber="8" PathText="Pfad/zur/batch8"/>
+                <local:PathGridItem PathNumber="9" PathText="Pfad/zur/batch9"/>
+                <local:PathGridItem PathNumber="10" PathText="Pfad/zur/batch10"/>
+                <local:PathGridItem PathNumber="11" PathText="Pfad/zur/batch11"/>
+                <local:PathGridItem PathNumber="12" PathText="Pfad/zur/batch12"/>
+                <local:PathGridItem PathNumber="13" PathText="Pfad/zur/batch13"/>
+                <local:PathGridItem PathNumber="14" PathText="Pfad/zur/batch14"/>
+                <local:PathGridItem PathNumber="15" PathText="Pfad/zur/batch15"/>
+                <local:PathGridItem PathNumber="16" PathText="Pfad/zur/batch16"/>
+                <local:PathGridItem PathNumber="17" PathText="Pfad/zur/batch17"/>
+                <local:PathGridItem PathNumber="18" PathText="Pfad/zur/batch18"/>
+                <local:PathGridItem PathNumber="19" PathText="Pfad/zur/batch19"/>
+                <local:PathGridItem PathNumber="20" PathText="Pfad/zur/batch20"/>
+            </UniformGrid>
+
+
+        </StackPanel>
+        <Button Style="{StaticResource PathBack}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40,0,0,10" Click="NavigateBack" />
+    </Grid>
+</Page>

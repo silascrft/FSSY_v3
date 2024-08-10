@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Remove="Styles\Styles.xaml" />
+      <Resource Include="Styles\Styles.xaml" />
+      <None Remove="Assets\Buttons\Paths\PathsDefault.png" />
+      <Resource Include="Assets\Buttons\Paths\PathsDefault.png" />
+      <None Remove="Assets\Buttons\Paths\PathsHover.png" />
+      <Resource Include="Assets\Buttons\Paths\PathsHover.png" />
+      <None Remove="Assets\Buttons\Menu\ButtonDefault.png" />
+      <Resource Include="Assets\Buttons\Menu\ButtonDefault.png" />
+      <None Remove="Assets\Buttons\Menu\ButtonHover.png" />
+      <Resource Include="Assets\Buttons\Menu\ButtonHover.png" />
+      <None Remove="Assets\Buttons\Menu\ButtonPress.png" />
+      <Resource Include="Assets\Buttons\Menu\ButtonPress.png" />
+      <None Remove="Assets\Buttons\Navigation\BackDefault.png" />
+      <Resource Include="Assets\Buttons\Navigation\BackDefault.png" />
+      <None Remove="Assets\Buttons\Navigation\BackHover.png" />
+      <Resource Include="Assets\Buttons\Navigation\BackHover.png" />
+      <None Remove="Assets\Buttons\Navigation\BackPress.png" />
+      <Resource Include="Assets\Buttons\Navigation\BackPress.png" />
+      <None Remove="Assets\Buttons\Navigation\Exit1.png" />
+      <Resource Include="Assets\Buttons\Navigation\Exit1.png" />
+      <None Remove="Assets\Buttons\Navigation\Exit2.png" />
+      <Resource Include="Assets\Buttons\Navigation\Exit2.png" />
+      <None Remove="Assets\Buttons\Navigation\Exit3.png" />
+      <Resource Include="Assets\Buttons\Navigation\Exit3.png" />
+      <None Remove="Assets\Buttons\Navigation\Minimize1.png" />
+      <Resource Include="Assets\Buttons\Navigation\Minimize1.png" />
+      <None Remove="Assets\Buttons\Navigation\Minimize2.png" />
+      <Resource Include="Assets\Buttons\Navigation\Minimize2.png" />
+      <None Remove="Assets\Buttons\Navigation\Minimize3.png" />
+      <Resource Include="Assets\Buttons\Navigation\Minimize3.png" />
+      <None Remove="Assets\Buttons\Savegame\Off.png" />
+      <Resource Include="Assets\Buttons\Savegame\Off.png" />
+      <None Remove="Assets\Buttons\Savegame\Off_Hover.png" />
+      <Resource Include="Assets\Buttons\Savegame\Off_Hover.png" />
+      <None Remove="Assets\Buttons\Savegame\On.png" />
+      <Resource Include="Assets\Buttons\Savegame\On.png" />
+      <None Remove="Assets\Buttons\Savegame\On_Hover.png" />
+      <Resource Include="Assets\Buttons\Savegame\On_Hover.png" />
+      <None Remove="Assets\BackgroundClean.png" />
+      <Resource Include="Assets\BackgroundClean.png" />
+      <None Remove="Assets\MainFullRes.png" />
+      <Resource Include="Assets\MainFullRes.png" />
+      <None Remove="Assets\TrayIconDefault.ico" />
+      <Resource Include="Assets\TrayIconDefault.ico" />
+      <None Remove="Assets\Buttons\Exo2-VariableFont_wght.ttf" />
+      <Resource Include="Assets\Buttons\Exo2-VariableFont_wght.ttf" />
+    </ItemGroup>
+
+</Project>
