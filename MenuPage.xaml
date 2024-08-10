@@ -1,4 +1,4 @@
-﻿<Page x:Class="FSSY_v3.Menu"
+﻿<Page x:Class="FSSY_v3.MenuPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -49,7 +49,7 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600">
 
                 <!-- Grid Column Layout -->
-                <UniformGrid Columns="5" VerticalAlignment="Stretch" Height="560" Width="580">
+                <UniformGrid x:Name="CheckBoxContainer" Columns="5" VerticalAlignment="Stretch" Height="560" Width="580">
                     <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox1" Content="1"/>
                     <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox2" Content="2"/>
                     <CheckBox Style="{StaticResource SavegameCheckBox}" x:Name="CheckBox3" Content="3"/>

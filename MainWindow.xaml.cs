@@ -13,13 +13,13 @@ public partial class MainWindow : Window
     public static readonly string FolderPath =
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FSSY");
 
-    private readonly Paths _paths = new Paths();
-    private readonly Menu _menu = new Menu();
+    private readonly PathsPage _pathsPage = new PathsPage();
+    private readonly MenuPage _menuPage = new MenuPage();
 
     public MainWindow()
     {
         InitializeComponent();
-        MainFrame.Navigate(_menu);
+        MainFrame.Navigate(_menuPage);
     }
 
     private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -42,17 +42,22 @@ public partial class MainWindow : Window
 
     private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
     {
-        _menu.SaveOnClose(sender, e);
-        _paths.SaveOnClose(sender, e);
+        _menuPage.SaveOnClose(sender, e);
+        _pathsPage.SaveOnClose(sender, e);
     }
 
     public void NavigateToPathPage()
     {
-        MainFrame.Navigate(_paths);
+        MainFrame.Navigate(_pathsPage);
     }
 
     public void NavigateToMenuPage()
     {
-        MainFrame.Navigate(_menu);
+        MainFrame.Navigate(_menuPage);
+    }
+
+    public PathsPage getPathsPage()
+    {
+        return _pathsPage;
     }
 }

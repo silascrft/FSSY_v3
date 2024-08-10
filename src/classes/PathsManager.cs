@@ -45,4 +45,9 @@ public class PathsManager
             }
         }
     }
+
+    public List<string> getPaths()
+    {
+        return Paths;
+    }
 }
