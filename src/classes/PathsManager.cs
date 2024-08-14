@@ -36,6 +36,7 @@ public class PathsManager
         if (!File.Exists(_filePath)) return;
         var json = File.ReadAllText(_filePath);
         var pathsManager = JsonConvert.DeserializeObject<PathsManager>(json);
+        this.Paths = pathsManager.Paths;
 
         for (var i = 0; i < pathsManager.Paths.Count && i < uniformGrid.Children.Count; i++)
         {
