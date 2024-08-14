@@ -18,7 +18,7 @@ public partial class MenuPage : Page
             Process.Start(@"C:\Program Files (x86)\Farming Simulator 2022\x64\FarmingSimulator2022Game.exe"); // Spiel starten
         }
         private void SynchronizeButton(object sender, RoutedEventArgs e) {
-            //TODO implement
+            RunTickedPaths(sender, e);
         }
         private void SynchronizeAndPlayButton(object sender, RoutedEventArgs e) {
             SynchronizeButton(sender, e);

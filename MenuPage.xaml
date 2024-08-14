@@ -21,7 +21,7 @@
                 </Button>
                 <Button
                     Style="{StaticResource MenuButton}"
-                    Click="RunTickedPaths">
+                    Click="SynchronizeButton">
                     <TextBlock>Synchronize</TextBlock>
                 </Button>
                 <Button
