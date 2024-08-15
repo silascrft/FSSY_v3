@@ -17,7 +17,7 @@
 
 
             <!-- Path Boxen -->
-        <Grid Height="260" Width="760" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="991">
+        <Grid Height="260" Width="760" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1">
 
             <Border CornerRadius="10" Background="#2F3C40" BorderBrush="Transparent">
                 <Border.Effect>

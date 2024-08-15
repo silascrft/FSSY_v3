@@ -74,6 +74,6 @@
             </StackPanel>
         </Grid>
         <Button Content="Open Overlay" Click="HandleOpenOverlay" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource MenuButton}"></Button>
-        <Frame x:Name="ModalFrame" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="ModalFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="200"/>
     </Grid>
 </Page>
