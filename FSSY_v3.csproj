@@ -57,6 +57,16 @@
       <Resource Include="Assets\TrayIconDefault.ico" />
       <None Remove="Assets\Buttons\Exo2-VariableFont_wght.ttf" />
       <Resource Include="Assets\Buttons\Exo2-VariableFont_wght.ttf" />
+      <None Remove="Assets\Buttons\Paths\Overlay\FolderDefault.png" />
+      <Resource Include="Assets\Buttons\Paths\Overlay\FolderDefault.png" />
+      <None Remove="Assets\Buttons\Paths\Overlay\FolderHover.png" />
+      <Resource Include="Assets\Buttons\Paths\Overlay\FolderHover.png" />
+      <None Remove="Assets\Buttons\Paths\Overlay\FolderPress.png" />
+      <Resource Include="Assets\Buttons\Paths\Overlay\FolderPress.png" />
+      <None Remove="Assets\Buttons\Paths\Overlay\OtherPathsDefault.png" />
+      <Resource Include="Assets\Buttons\Paths\Overlay\OtherPathsDefault.png" />
+      <None Remove="Assets\Buttons\Paths\Overlay\OtherPathsHover.png" />
+      <Resource Include="Assets\Buttons\Paths\Overlay\OtherPathsHover.png" />
     </ItemGroup>
 
 </Project>

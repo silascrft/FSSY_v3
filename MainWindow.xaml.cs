@@ -56,8 +56,13 @@ public partial class MainWindow : Window
         MainFrame.Navigate(_menuPage);
     }
 
-    public PathsPage getPathsPage()
+    public PathsPage GetPathsPage()
     {
         return _pathsPage;
+    }
+
+    public MenuPage GetMenuPage()
+    {
+        return _menuPage;
     }
 }

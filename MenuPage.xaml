@@ -73,5 +73,7 @@
                 </UniformGrid>
             </StackPanel>
         </Grid>
+        <Button Content="Open Overlay" Click="HandleOpenOverlay" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource MenuButton}"></Button>
+        <Frame x:Name="ModalFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>

@@ -24,5 +24,12 @@ namespace FSSY_v3
         {
             InitializeComponent();
         }
+
+        private void HandleClose(object sender, RoutedEventArgs e)
+        {
+            // NavigationService.GoBack();
+            var mainWindow = (MainWindow)Window.GetWindow(this);
+            mainWindow.GetMenuPage().GetModalFrame().Navigate(null);
+        }
     }
 }

@@ -63,29 +63,6 @@
             </Border>
 
         </Grid>
-
-        <!-- Grid Column Layout -->
-
-        <!--
-        Grid
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="760" Margin="0 0 0 0">
-
-                        
-                <UniformGrid x:Name="FolderIcon" Columns="2" VerticalAlignment="Stretch" Height="240" Width="745">
-                    <Grid Width="350" Height="100">
-                        <Button Style="{StaticResource PathFolderButton}"/>
-                    </Grid>
-                   <Grid Width="350" Height="100">
-                       <Button Style="{StaticResource PathFolderButton}"/>
-                   </Grid>
-                   <Grid Width="350" Height="100">
-                       <Button Style="{StaticResource PathFolderButton}"/>
-                    </Grid>
-                   <Grid Width="350" Height="100">
-                        <Button Style="{StaticResource PathFolderButton}"/>
-                  </Grid>
-                </UniformGrid>
-            </StackPanel>
-        </Grid> -->
+            <Button Content="Close" Click="HandleClose" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource MenuButton}"/>
     </Grid>
 </Page>

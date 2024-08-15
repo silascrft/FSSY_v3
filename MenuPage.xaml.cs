@@ -8,6 +8,7 @@ namespace FSSY_v3;
 public partial class MenuPage : Page
 {
     private readonly SavegameStates _savegameStates;
+    private readonly PathOverlay _pathOverlay = new PathOverlay();
         public MenuPage() {
             InitializeComponent();
             _savegameStates = new SavegameStates();
@@ -98,7 +99,7 @@ public partial class MenuPage : Page
             const string exePath = @"C:\Program Files\FreeFileSync\FreeFileSync.exe";
 
             var mainWindow = (MainWindow)Window.GetWindow(this);
-            var paths = mainWindow.getPathsPage().getPathsManager().getPaths();
+            var paths = mainWindow.GetPathsPage().getPathsManager().getPaths();
             var checkBoxes = CheckBoxContainer.Children;
 
             for (var index = 0; index < checkBoxes.Count; index++)
@@ -112,4 +113,13 @@ public partial class MenuPage : Page
             }
     }
 
+        private void HandleOpenOverlay(object sender, RoutedEventArgs e)
+        {
+            ModalFrame.Navigate(_pathOverlay);
+        }
+
+        public Frame GetModalFrame()
+        {
+            return ModalFrame;
+        }
 }
