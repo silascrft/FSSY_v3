@@ -9,9 +9,6 @@
     <Grid>
       <Image Source="/Assets/BackgroundClean.png"/>
 
-        <Button Height="100" Width="100" Panel.ZIndex="1" Click="OpenFileButton_Click">
-            Test
-        </Button>
           
       <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <UniformGrid x:Name="PathsGrid" Columns="5" VerticalAlignment="Bottom" Width="962" Height="562">
