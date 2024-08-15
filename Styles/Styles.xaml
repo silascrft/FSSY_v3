@@ -158,6 +158,15 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Setter Property="ToolTipService.InitialShowDelay" Value="2000"/>
+        <Style.Triggers>
+            <!-- Trigger für deaktivierte CheckBox -->
+            <Trigger Property="IsEnabled" Value="False">
+                <!-- Tooltip wird nur bei deaktivierten CheckBoxen angezeigt -->
+                <Setter Property="ToolTipService.ShowOnDisabled" Value="True"/>
+                <Setter Property="ToolTip" Value="Dieses Savegame existiert noch nicht :("/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <!-- Text Path Boxes -->
