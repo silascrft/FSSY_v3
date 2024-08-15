@@ -63,6 +63,6 @@
             </Border>
 
         </Grid>
-            <Button Content="Close" Click="HandleClose" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource MenuButton}"/>
+            <Button Height="600" Width="1000" Opacity="0" Content="" Click="HandleClose" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </Page>

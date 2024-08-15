@@ -34,11 +34,13 @@
                     Click="PathsButton">
                     <TextBlock>Paths</TextBlock>
                 </Button>
+                <Button Content="Open Overlay" Click="HandleOpenOverlay" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource MenuButton}"></Button>
                 <Button
                     Style="{StaticResource MenuButton}"
                         Click="ExitButton">
                     <TextBlock>Exit</TextBlock>
                 </Button>
+                
 
             </StackPanel>
         </Grid>
@@ -73,7 +75,7 @@
                 </UniformGrid>
             </StackPanel>
         </Grid>
-        <Button Content="Open Overlay" Click="HandleOpenOverlay" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource MenuButton}"></Button>
+        
         <Frame x:Name="ModalFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="200"/>
     </Grid>
 </Page>
