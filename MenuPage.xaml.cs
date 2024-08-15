@@ -98,8 +98,7 @@ public partial class MenuPage : Page
         {
             const string exePath = @"C:\Program Files\FreeFileSync\FreeFileSync.exe";
 
-            var mainWindow = (MainWindow)Window.GetWindow(this);
-            var paths = mainWindow.GetPathsPage().getPathsManager().getPaths();
+            var paths = PathsManager.BatchPaths;
             var checkBoxes = CheckBoxContainer.Children;
 
             for (var index = 0; index < checkBoxes.Count; index++)

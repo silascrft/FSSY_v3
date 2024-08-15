@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace FSSY_v3
 {
-    /// <summary>
-    /// Interaction logic for PathOverlay.xaml
-    /// </summary>
+    //TODO Implement saving to pathsManager
     public partial class PathOverlay : Page
     {
         public PathOverlay()

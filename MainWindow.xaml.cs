@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
+using FSSY_v3.classes;
 
 namespace FSSY_v3;
 
@@ -13,12 +14,15 @@ public partial class MainWindow : Window
     public static readonly string FolderPath =
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FSSY");
 
-    private readonly PathsPage _pathsPage = new PathsPage();
-    private readonly MenuPage _menuPage = new MenuPage();
+    private readonly PathsPage _pathsPage;
+    private readonly MenuPage _menuPage;
 
     public MainWindow()
     {
         InitializeComponent();
+        PathsManager.LoadPathsFromFile();
+        _pathsPage = new PathsPage();
+        _menuPage = new MenuPage();
         MainFrame.Navigate(_menuPage);
     }
 
@@ -55,6 +59,7 @@ public partial class MainWindow : Window
     {
         MainFrame.Navigate(_menuPage);
     }
+
 
     public PathsPage GetPathsPage()
     {

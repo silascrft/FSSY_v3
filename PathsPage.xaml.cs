@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Shapes;
 using FSSY_v3.classes;
 using Microsoft.Win32;
 
@@ -8,13 +9,25 @@ namespace FSSY_v3;
 
 public partial class PathsPage : Page
 {
-    private readonly PathsManager _pathsManager;
 
     public PathsPage()
     {
         InitializeComponent();
-        _pathsManager = new PathsManager();
-        LoadPathsFromFile();
+        FillPaths();
+    }
+
+    private void FillPaths()
+    {
+        var uniformGrid = PathsGrid;
+        var batchPaths = PathsManager.BatchPaths;
+        
+        for (var i = 0; i < batchPaths.Count && i < uniformGrid.Children.Count; i++)
+        {
+            if (uniformGrid.Children[i] is PathGridItem pathGridItem)
+            {
+                pathGridItem.PathText = batchPaths[i];
+            }
+        }
     }
 
     private void OpenFileButton_Click(object sender, RoutedEventArgs e)
@@ -30,17 +43,14 @@ public partial class PathsPage : Page
             MessageBox.Show($"Datei ausgewählt: {filePath}");
         }
     }
-
-    //Back Button Events
+    
     private void NavigateBack(object sender, RoutedEventArgs e)
     {
         SavePaths();
         var mainWindow = (MainWindow)Window.GetWindow(this);
         mainWindow.NavigateToMenuPage();
     }
-
-
-    //Quit Button Event
+    
     public void SaveOnClose(object sender, CancelEventArgs e)
     {
         SavePaths();
@@ -48,16 +58,6 @@ public partial class PathsPage : Page
 
     private void SavePaths()
     {
-        _pathsManager.SavePathsToFile(PathsGrid);
-    }
-
-    private void LoadPathsFromFile()
-    {
-        _pathsManager.LoadPathsFromFile(PathsGrid);
-    }
-
-    public PathsManager getPathsManager()
-    {
-        return _pathsManager;
+        PathsManager.SaveBatchPathsToFile(PathsGrid);
     }
 }
