@@ -103,7 +103,6 @@ public static class PathsManager
                     MessageBoxButton.OK);
                 break;
         }
-        Console.WriteLine("GameExePath: " + GameExePath);
     }
 
     public static List<string> BatchPaths
