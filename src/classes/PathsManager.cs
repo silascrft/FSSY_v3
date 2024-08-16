@@ -8,49 +8,19 @@ using System.Windows.Controls.Primitives;
 
 public class PathsDto
 {
-    private List<string> _batchPaths;
-    private string _gameExePath = "";
-    private string _cloudDrivePath = "";
-    private string _ffsExePath = "";
-    private string _savegameDirectoryPath = "";
+    public List<string> BatchPaths { get; set; }
+    public string GameExePath { get; set; }
+    public string CloudDrivePath { get; set; }
+    public string FfsExePath { get; set; }
+    public string SavegameDirectoryPath { get; set; }
 
-    public PathsDto( List<string> batchPaths, string gameExePath, string cloudDrivePath, string ffsExePath, string savegameDirectoryPath)
+    public PathsDto(List<string> batchPaths, string gameExePath, string cloudDrivePath, string ffsExePath, string savegameDirectoryPath)
     {
-        _batchPaths = batchPaths;
-        _gameExePath = gameExePath;
-        _cloudDrivePath = cloudDrivePath;
-        _ffsExePath = ffsExePath;
-        _savegameDirectoryPath = savegameDirectoryPath;
-    }
-
-    public List<string> BatchPaths
-    {
-        get => _batchPaths;
-        set => _batchPaths = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-    public string GameExePath
-    {
-        get => _gameExePath;
-        set => _gameExePath = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-    public string CloudDrivePath
-    {
-        get => _cloudDrivePath;
-        set => _cloudDrivePath = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-    public string FfsExePath
-    {
-        get => _ffsExePath;
-        set => _ffsExePath = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-    public string SavegameDirectoryPath
-    {
-        get => _savegameDirectoryPath;
-        set => _savegameDirectoryPath = value ?? throw new ArgumentNullException(nameof(value));
+        BatchPaths = batchPaths;
+        GameExePath = gameExePath;
+        CloudDrivePath = cloudDrivePath;
+        FfsExePath = ffsExePath;
+        SavegameDirectoryPath = savegameDirectoryPath;
     }
 }
 
@@ -89,13 +59,18 @@ public static class PathsManager
         ChangeEveryPath(pathsDto);
     }
 
+    /// <summary>
+    /// Changes every attribute of the PathsManager to the value of the matching attribute inside the PathsDto object.
+    /// If the attribute of the PathsDto is null, the PathsManager attribute is set to a default value.
+    /// </summary>
+    /// <param name="pathsDto">The given Data Transfer Object of the PathsManager which matches in the attributes</param>
     private static void ChangeEveryPath(PathsDto pathsDto)
     {
-        _batchPaths = pathsDto.BatchPaths;
-        _gameExePath = pathsDto.GameExePath;
-        _cloudDrivePath = pathsDto.CloudDrivePath;
-        _ffsExePath = pathsDto.FfsExePath;
-        _savegameDirectoryPath = pathsDto.SavegameDirectoryPath;
+        _batchPaths = pathsDto.BatchPaths ?? new List<string>();
+        _gameExePath = pathsDto.GameExePath ?? "";
+        _cloudDrivePath = pathsDto.CloudDrivePath ?? "";
+        _ffsExePath = pathsDto.FfsExePath ?? "";
+        _savegameDirectoryPath = pathsDto.SavegameDirectoryPath ?? "";
     }
 
     public static List<string> BatchPaths
