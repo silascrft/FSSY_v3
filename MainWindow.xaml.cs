@@ -46,8 +46,9 @@ public partial class MainWindow : Window
 
     private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
     {
-        _menuPage.SaveOnClose(sender, e);
-        _pathsPage.SaveOnClose(sender, e);
+        _menuPage.SaveStates();
+        _pathsPage.SavePaths();
+        PathsManager.SavePathsToFile();
     }
 
     public void NavigateToPathPage()

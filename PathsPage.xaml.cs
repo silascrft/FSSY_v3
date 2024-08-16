@@ -29,35 +29,15 @@ public partial class PathsPage : Page
             }
         }
     }
-
-    private void OpenFileButton_Click(object sender, RoutedEventArgs e)
-    {
-        var openFileDialog = new OpenFileDialog();
-        openFileDialog.Filter = "Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*|FreeFileSynch Batch (.ffs_batch)|*.ffs_batch|FreeFileSynch RealTime (.ffs_real)|*.ffs_real";
-
-        var result = openFileDialog.ShowDialog();
-
-        if (result == true)
-        {
-            var filePath = openFileDialog.FileName;
-            MessageBox.Show($"Datei ausgewählt: {filePath}");
-        }
-    }
     
     private void NavigateBack(object sender, RoutedEventArgs e)
     {
-        SavePaths();
         var mainWindow = (MainWindow)Window.GetWindow(this);
         mainWindow.NavigateToMenuPage();
     }
     
-    public void SaveOnClose(object sender, CancelEventArgs e)
+    public void SavePaths()
     {
-        SavePaths();
-    }
-
-    private void SavePaths()
-    {
-        PathsManager.SaveBatchPathsToFile(PathsGrid);
+        PathsManager.SaveBatchPaths(PathsGrid);
     }
 }

@@ -28,26 +28,26 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="760">
 
                 <!-- Grid Column Layout -->
-                <UniformGrid x:Name="CheckBoxContainer" Columns="2" VerticalAlignment="Stretch" Height="240" Width="745">
+                <UniformGrid x:Name="PathOverlayGrid" Columns="2" VerticalAlignment="Stretch" Height="240" Width="745">
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Game .exe Path" />
-                        <TextBox Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
+                        <TextBox x:Name="GameExePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Cloud Drive Path" />
-                        <TextBox Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
+                        <TextBox x:Name="CloudDrivePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="FFS .exe Path" />
-                        <TextBox Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
+                        <TextBox x:Name="FfsExePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Savegames Path" />
-                        <TextBox Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
+                        <TextBox x:Name="SavegameDirPath" Style="{StaticResource OverlayPathTextBox}" Text="toller/toller/pfad" />
                     </Grid>
                 </UniformGrid>
             </StackPanel>

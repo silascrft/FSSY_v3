@@ -1,4 +1,7 @@
-﻿namespace FSSY_v3.classes;
+﻿using System.Windows;
+using System.Windows.Controls;
+
+namespace FSSY_v3.classes;
 
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -27,14 +30,14 @@ public class PathsDto
 public static class PathsManager
 {
     private static List<string> _batchPaths = [];
-    private static string _gameExePath = "";
-    private static string _cloudDrivePath = "";
-    private static string _ffsExePath = "";
-    private static string _savegameDirectoryPath = "";
     private static readonly string _folderPath = MainWindow.FolderPath;
     private static readonly string _filePath  = Path.Combine(_folderPath, "paths.json");
+    public static string GameExePath { get; private set; } = "";
+    public static string CloudDrivePath { get; private set; } = "";
+    public static string FfsExePath { get; private set; } = "";
+    public static string SavegameDirectoryPath { get; private set; } = "";
 
-    public static void SaveBatchPathsToFile(UniformGrid uniformGrid)
+    public static void SaveBatchPaths(UniformGrid uniformGrid)
     {
         if (!Directory.Exists(_folderPath))
         {
@@ -45,8 +48,11 @@ public static class PathsManager
         foreach (PathGridItem pathGridItem in uniformGrid.Children) {
             _batchPaths.Add(pathGridItem.PathText);
         }
+    }
 
-        var pathsDto = new PathsDto(_batchPaths, _gameExePath, _cloudDrivePath, _ffsExePath, _savegameDirectoryPath);
+    public static void SavePathsToFile()
+    {
+        var pathsDto = new PathsDto(_batchPaths, GameExePath, CloudDrivePath, FfsExePath, SavegameDirectoryPath);
         var json = JsonConvert.SerializeObject(pathsDto, Formatting.Indented);
         File.WriteAllText(_filePath, json);
     }
@@ -67,10 +73,37 @@ public static class PathsManager
     private static void ChangeEveryPath(PathsDto pathsDto)
     {
         _batchPaths = pathsDto.BatchPaths ?? new List<string>();
-        _gameExePath = pathsDto.GameExePath ?? "";
-        _cloudDrivePath = pathsDto.CloudDrivePath ?? "";
-        _ffsExePath = pathsDto.FfsExePath ?? "";
-        _savegameDirectoryPath = pathsDto.SavegameDirectoryPath ?? "";
+        GameExePath = pathsDto.GameExePath ?? "";
+        CloudDrivePath = pathsDto.CloudDrivePath ?? "";
+        FfsExePath = pathsDto.FfsExePath ?? "";
+        SavegameDirectoryPath = pathsDto.SavegameDirectoryPath ?? "";
+    }
+
+    public static void SaveOverlayPath(string filePath, TextBox element)
+    {
+        var xName = element.Name;
+        switch (xName)
+        {
+            case "GameExePath":
+                GameExePath = filePath;
+                break;
+            case "CloudDrivePath":
+                CloudDrivePath = filePath;
+                break;
+            case "FfsExePath":
+                FfsExePath = filePath;
+                break;
+            case "SavegameDirPath":
+                SavegameDirectoryPath = filePath;
+                break;
+            default:
+                MessageBox.Show(
+                    "An error occurred - Failed to save path:\n" + filePath,
+                    "Failed to save path.",
+                    MessageBoxButton.OK);
+                break;
+        }
+        Console.WriteLine("GameExePath: " + GameExePath);
     }
 
     public static List<string> BatchPaths
@@ -78,4 +111,7 @@ public static class PathsManager
         get => _batchPaths;
         set => _batchPaths = value ?? throw new ArgumentNullException(nameof(value));
     }
+
+
+
 }

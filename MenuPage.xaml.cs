@@ -8,10 +8,11 @@ namespace FSSY_v3;
 public partial class MenuPage : Page
 {
     private readonly SavegameStates _savegameStates;
-    private readonly PathOverlay _pathOverlay = new PathOverlay();
+    private readonly PathOverlay _pathOverlay;
         public MenuPage() {
             InitializeComponent();
             _savegameStates = new SavegameStates();
+            _pathOverlay = new PathOverlay();
             LoadCheckBoxStates();
         }
 
@@ -36,9 +37,10 @@ public partial class MenuPage : Page
         mainWindow.ExitButton(sender,e);
         }
 
-        public void SaveOnClose(object sender, System.ComponentModel.CancelEventArgs e)
+        public void SaveStates()
         {
             SaveCheckBoxStates();
+            _pathOverlay.SavePaths();
         }
         private void SaveCheckBoxStates()
         {

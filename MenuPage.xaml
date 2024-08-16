@@ -31,10 +31,10 @@
                 </Button>
                 <Button
                     Style="{StaticResource MenuButton}"
-                    Click="PathsButton">
+                    Click="HandleOpenOverlay">
                     <TextBlock>Paths</TextBlock>
                 </Button>
-                <Button Content="Open Overlay" Click="HandleOpenOverlay" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource MenuButton}"></Button>
+                <Button Content="Old Paths Button" Click="PathsButton" Style="{StaticResource MenuButton}"></Button>
                 <Button
                     Style="{StaticResource MenuButton}"
                         Click="ExitButton">
