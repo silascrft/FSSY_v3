@@ -10,10 +10,18 @@ namespace FSSY_v3;
 public partial class PathsPage : Page
 {
 
-    public PathsPage()
+    private readonly MainWindow _mainWindow;
+
+    public PathsPage(MainWindow mainWindow)
     {
+        _mainWindow = mainWindow;
         InitializeComponent();
         FillPaths();
+    }
+
+    public void SavePaths()
+    {
+        PathsManager.SaveBatchPaths(PathsGrid);
     }
 
     private void FillPaths()
@@ -29,15 +37,10 @@ public partial class PathsPage : Page
             }
         }
     }
-    
-    private void NavigateBack(object sender, RoutedEventArgs e)
+
+    private void HandleBack(object sender, RoutedEventArgs e)
     {
-        var mainWindow = (MainWindow)Window.GetWindow(this);
-        mainWindow.NavigateToMenuPage();
-    }
-    
-    public void SavePaths()
-    {
-        PathsManager.SaveBatchPaths(PathsGrid);
+        _mainWindow.NavigateToPage(_mainWindow._menuPage);
+        SavePaths();
     }
 }

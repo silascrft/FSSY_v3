@@ -69,4 +69,8 @@
       <Resource Include="Assets\Buttons\Paths\Overlay\OtherPathsHover.png" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="src\exceptions\" />
+    </ItemGroup>
+
 </Project>

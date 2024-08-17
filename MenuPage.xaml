@@ -16,28 +16,28 @@
             <StackPanel VerticalAlignment="Center">
                 <Button
                     Style="{StaticResource MenuButton}"
-                    Click="PlayButton">
+                    Click="HandlePlay">
                     <TextBlock>Play</TextBlock>
                 </Button>
                 <Button
                     Style="{StaticResource MenuButton}"
-                    Click="SynchronizeButton">
+                    Click="HandleSynchronize">
                     <TextBlock>Synchronize</TextBlock>
                 </Button>
                 <Button
                     Style="{StaticResource MenuButton}"
-                    Click="SynchronizeAndPlayButton">
+                    Click="HandleSynchronizeAndPlay">
                     <TextBlock>Synchronize &amp; Play</TextBlock>
                 </Button>
                 <Button
                     Style="{StaticResource MenuButton}"
-                    Click="HandleOpenOverlay">
+                    Click="HandleOpenModal">
                     <TextBlock>Paths</TextBlock>
                 </Button>
-                <Button Content="Old Paths Button" Click="PathsButton" Style="{StaticResource MenuButton}"></Button>
+                <Button Content="Old Paths Button" Click="HandlePaths" Style="{StaticResource MenuButton}"></Button>
                 <Button
                     Style="{StaticResource MenuButton}"
-                        Click="ExitButton">
+                        Click="HandleExit">
                     <TextBlock>Exit</TextBlock>
                 </Button>
                 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using FSSY_v3.classes;
 
@@ -14,15 +15,15 @@ public partial class MainWindow : Window
     public static readonly string FolderPath =
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FSSY");
 
-    private readonly PathsPage _pathsPage;
-    private readonly MenuPage _menuPage;
+    public readonly PathsPage _pathsPage;
+    public readonly MenuPage _menuPage;
 
     public MainWindow()
     {
         InitializeComponent();
         PathsManager.LoadPathsFromFile();
-        _pathsPage = new PathsPage();
-        _menuPage = new MenuPage();
+        _pathsPage = new PathsPage(this);
+        _menuPage = new MenuPage(this);
         MainFrame.Navigate(_menuPage);
     }
 
@@ -30,18 +31,18 @@ public partial class MainWindow : Window
     {
         if (e.ButtonState == MouseButtonState.Pressed)
         {
-            this.DragMove();
+            DragMove();
         }
     }
 
     private void MinimizeButton(object sender, RoutedEventArgs e)
     {
-        this.WindowState = WindowState.Minimized;
+        WindowState = WindowState.Minimized;
     }
 
     public void ExitButton(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        Close();
     }
 
     private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -51,24 +52,8 @@ public partial class MainWindow : Window
         PathsManager.SavePathsToFile();
     }
 
-    public void NavigateToPathPage()
+    public void NavigateToPage(Page page)
     {
-        MainFrame.Navigate(_pathsPage);
-    }
-
-    public void NavigateToMenuPage()
-    {
-        MainFrame.Navigate(_menuPage);
-    }
-
-
-    public PathsPage GetPathsPage()
-    {
-        return _pathsPage;
-    }
-
-    public MenuPage GetMenuPage()
-    {
-        return _menuPage;
+        MainFrame.Navigate(page);
     }
 }

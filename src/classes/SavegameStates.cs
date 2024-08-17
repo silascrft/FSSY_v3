@@ -12,12 +12,12 @@ public class SavegameStates
     {
         _folderPath = MainWindow.FolderPath;
         _filePath = Path.Combine(_folderPath, "checkboxStates.json");
-        Directory.CreateDirectory(_folderPath); // Ordner erstellen, falls er nicht existiert
+        Directory.CreateDirectory(_folderPath);
     }
 
     public void Save(CheckBoxState state)
     {
-        string json = JsonConvert.SerializeObject(state);
+        var json = JsonConvert.SerializeObject(state);
         File.WriteAllText(_filePath, json);
     }
 
@@ -25,9 +25,9 @@ public class SavegameStates
     {
         if (File.Exists(_filePath))
         {
-            string json = File.ReadAllText(_filePath);
+            var json = File.ReadAllText(_filePath);
             return JsonConvert.DeserializeObject<CheckBoxState>(json);
         }
-        return new CheckBoxState(); // Rückgabe eines leeren Zustands, falls die Datei nicht existiert
+        return new CheckBoxState();
     }
 }

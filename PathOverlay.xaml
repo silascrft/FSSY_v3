@@ -35,7 +35,7 @@
                         <TextBox x:Name="GameExePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/game/pfad" ToolTip="toller/game/path"/>
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFolderSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Cloud Drive Path" />
                         <TextBox x:Name="CloudDrivePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/cloud/pfad" ToolTip="toller/cloud/path"/>
                     </Grid>
@@ -45,7 +45,7 @@
                         <TextBox x:Name="FfsExePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/ffs/pfad" ToolTip="toller/ffs/path"/>
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFolderSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Savegames Path" />
                         <TextBox x:Name="SavegameDirPath" Style="{StaticResource OverlayPathTextBox}" Text="toller/savegame/pfad" ToolTip="toller/savegame/path"/>
                     </Grid>

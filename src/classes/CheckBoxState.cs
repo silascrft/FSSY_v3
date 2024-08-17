@@ -22,5 +22,4 @@ public class CheckBoxState
     public bool CheckBox18 { get; set; }
     public bool CheckBox19 { get; set; }
     public bool CheckBox20 { get; set; }
-    // Weitere CheckBox-Properties können hinzugefügt werden
 }

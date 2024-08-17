@@ -36,6 +36,6 @@
 
 
         </StackPanel>
-        <Button Style="{StaticResource PathBack}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40,0,0,10" Click="NavigateBack" />
+        <Button Style="{StaticResource PathBack}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40,0,0,10" Click="HandleBack" />
     </Grid>
 </Page>
