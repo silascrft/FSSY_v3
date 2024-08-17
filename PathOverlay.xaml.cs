@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using FSSY_v3.classes;
@@ -88,7 +87,7 @@ namespace FSSY_v3
         {
             var openFileDialog = new OpenFileDialog
             {
-                Filter = "FreeFileSync Files (.ffs_batch)|*.ffs_batch;*.ffs_real"
+                Filter = "FreeFileSync Files|*.ffs_batch;*.ffs_real|Executables|*.exe"
             };
 
             var valid = openFileDialog.ShowDialog();

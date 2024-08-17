@@ -1,9 +1,6 @@
-﻿using System.ComponentModel;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Shapes;
 using FSSY_v3.classes;
-using Microsoft.Win32;
 
 namespace FSSY_v3;
 
