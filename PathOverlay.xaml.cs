@@ -15,6 +15,7 @@ namespace FSSY_v3
         {
             InitializeComponent();
             FillPaths();
+            FillToolTips();
         }
 
         private void FillPaths()
@@ -23,6 +24,14 @@ namespace FSSY_v3
             CloudDrivePath.Text = PathsManager.CloudDrivePath.Equals("") ? DefaultPath : PathsManager.CloudDrivePath;
             FfsExePath.Text = PathsManager.FfsExePath.Equals("") ? DefaultPath : PathsManager.FfsExePath;
             SavegameDirPath.Text = PathsManager.SavegameDirectoryPath.Equals("") ? DefaultPath : PathsManager.SavegameDirectoryPath;
+        }
+
+        private void FillToolTips()
+        {
+            GameExePath.ToolTip = GameExePath.Text;
+            CloudDrivePath.ToolTip = CloudDrivePath.Text;
+            FfsExePath.ToolTip = FfsExePath.Text;
+            SavegameDirPath.ToolTip = SavegameDirPath.Text;
         }
 
         private void HandleClose(object sender, RoutedEventArgs e)

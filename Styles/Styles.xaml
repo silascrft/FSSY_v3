@@ -279,6 +279,7 @@
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="CaretBrush" Value="White" />
         <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="ToolTipService.BetweenShowDelay" Value="650"/>
     </Style>
     
     <!--Overlay Text Blox-->
