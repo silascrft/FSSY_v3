@@ -19,6 +19,8 @@
     <Grid>
         <Frame x:Name="MainFrame" Panel.ZIndex="100" NavigationUIVisibility="Hidden" />
 
+        <Image Source="/Assets/WindowControllBG.png" HorizontalAlignment="Right" VerticalAlignment="Top" Height="21.3" Width="47" Panel.ZIndex="998"/>
+
         <!-- Window Navigation Buttons -->
         <StackPanel
             VerticalAlignment="Top"

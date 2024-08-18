@@ -14,6 +14,7 @@
 
     <ItemGroup>
       <None Remove="Assets\Buttons\Paths\PathsDefault.png" />
+      <None Remove="Assets\MainFullRes.png" />
       <Resource Include="Assets\Buttons\Paths\PathsDefault.png" />
       <None Remove="Assets\Buttons\Paths\PathsHover.png" />
       <Resource Include="Assets\Buttons\Paths\PathsHover.png" />
@@ -51,9 +52,8 @@
       <Resource Include="Assets\Buttons\Savegame\On_Hover.png" />
       <None Remove="Assets\BackgroundClean.png" />
       <Resource Include="Assets\BackgroundClean.png" />
-      <None Remove="Assets\MainFullRes.png" />
-      <Resource Include="Assets\MainFullRes.png" />
       <None Remove="Assets\TrayIconDefault.ico" />
+      <Resource Include="Assets\MainFullRes.png" />
       <Resource Include="Assets\TrayIconDefault.ico" />
       <None Remove="Assets\Buttons\Exo2-VariableFont_wght.ttf" />
       <Resource Include="Assets\Buttons\Exo2-VariableFont_wght.ttf" />
