@@ -1,13 +1,14 @@
 ﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Effects;
 using FSSY_v3.classes;
 
 namespace FSSY_v3;
 
 public partial class MenuPage : Page
 {
-    private MainWindow _mainWindow;
+    private readonly MainWindow _mainWindow;
     private readonly SavegameStates _savegameStates;
     private readonly PathOverlay _pathOverlay;
 
@@ -28,11 +29,19 @@ public partial class MenuPage : Page
 
     public void OpenModal()
     {
+        ToggleBlur(true);
         ModalFrame.Navigate(_pathOverlay);
     }
+
     public void CloseModal()
     {
+        ToggleBlur(false);
         ModalFrame.Navigate(null);
+    }
+
+    private void ToggleBlur(bool enable)
+    {
+        MenuGrid.Effect = enable ? new BlurEffect { Radius = 20 } : null;
     }
 
     private void LoadCheckBoxStates()
@@ -60,6 +69,7 @@ public partial class MenuPage : Page
         CheckBox19.IsChecked = state.CheckBox19;
         CheckBox20.IsChecked = state.CheckBox20;
     }
+
     private void SaveCheckBoxStates()
     {
         var state = new CheckBoxState
