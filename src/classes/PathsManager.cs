@@ -37,17 +37,10 @@ public static class PathsManager
     public static string FfsExePath { get; private set; } = "";
     public static string SavegameDirectoryPath { get; private set; } = "";
 
-    public static void SaveBatchPaths(UniformGrid uniformGrid)
+    public static List<string> BatchPaths
     {
-        if (!Directory.Exists(_folderPath))
-        {
-            Directory.CreateDirectory(_folderPath);
-        }
-
-        _batchPaths.Clear();
-        foreach (PathGridItem pathGridItem in uniformGrid.Children) {
-            _batchPaths.Add(pathGridItem.PathText);
-        }
+        get => _batchPaths;
+        set => _batchPaths = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public static void SavePathsToFile()
@@ -79,6 +72,21 @@ public static class PathsManager
         SavegameDirectoryPath = pathsDto.SavegameDirectoryPath ?? "";
     }
 
+    public static void SaveBatchPaths(UniformGrid uniformGrid)
+    {
+        if (!Directory.Exists(_folderPath))
+        {
+            Directory.CreateDirectory(_folderPath);
+        }
+
+        _batchPaths.Clear();
+        foreach (PathGridItem pathGridItem in uniformGrid.Children) {
+            _batchPaths.Add(pathGridItem.PathText);
+        }
+
+        SavePathsToFile();
+    }
+
     public static void SaveOverlayPath(string filePath, TextBox element)
     {
         var xName = element.Name;
@@ -103,14 +111,7 @@ public static class PathsManager
                     MessageBoxButton.OK);
                 break;
         }
+
+        SavePathsToFile();
     }
-
-    public static List<string> BatchPaths
-    {
-        get => _batchPaths;
-        set => _batchPaths = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-
-
 }
