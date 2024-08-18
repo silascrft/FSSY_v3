@@ -1,0 +1,56 @@
+﻿<Page x:Class="FSSY_v3.FirstRunOverlay"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FSSY_v3"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="FirstRunOverlay">
+
+    <Grid>
+
+        <!-- BG -->
+        <Grid Height="600" Width="1000" Opacity="0.7" >
+            <Border Height="600" Width="1000" Background="#1B2B32" CornerRadius="10" BorderBrush="Transparent"/>
+
+        </Grid>
+
+        <!-- Path Boxen -->
+        <Grid Height="140" Width="390" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1">
+
+            <Border CornerRadius="10" Background="#2F3C40" BorderBrush="Transparent">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="100" ShadowDepth="0" Opacity="0.5"/>
+                </Border.Effect>
+            </Border>
+
+                <!-- Grid Column Layout -->
+
+                <Grid Style="{StaticResource Overlay Grids}">
+                    <Button Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                    <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="FSSY Files Path" />
+                    <TextBox Style="{StaticResource OverlayPathTextBox}" Text="toller/game/pfad" ToolTip="toller/game/path"/>
+                </Grid>
+
+            
+
+        </Grid>
+        <!-- Center Window BG -->
+        <Grid Height="140" Width="390" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Border CornerRadius="10" Background="#2F3C40" BorderBrush="Transparent">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="100" ShadowDepth="0" Opacity="0.5"/>
+                </Border.Effect>
+            </Border>
+
+        </Grid>
+        <StackPanel Height="40" Width="390" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 190 0 0" Orientation="Horizontal">
+                <UniformGrid>
+                <Button Style="{StaticResource Navigation}" FontSize="18" Height="20" Width="40" Margin="20 0 0 0">SKIP</Button>
+                <Button Style="{StaticResource Navigation}" FontSize="18" Height="20" Width="40" Margin="20 0 0 0">OK</Button>
+                </UniformGrid>
+        </StackPanel>
+    </Grid>
+</Page>

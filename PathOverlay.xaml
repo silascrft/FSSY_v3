@@ -9,14 +9,16 @@
       Title="PathOverlay">
 
     <Grid>
-            <!-- BG -->
-        <Grid Height="600" Width="1000" Opacity="0.7" >
-            <Border Height="600" Width="1000" Background="#1B2B32" CornerRadius="10" BorderBrush="Transparent"/>
 
+
+        <!-- BG -->
+        <Grid Height="600" Width="1000" Opacity="0.7">
+            <Border Height="600" Width="1000" Background="#1B2B32" CornerRadius="10" BorderBrush="Transparent"/>
         </Grid>
 
 
-            <!-- Path Boxen -->
+
+        <!-- Path Boxen -->
         <Grid Height="260" Width="760" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1">
 
             <Border CornerRadius="10" Background="#2F3C40" BorderBrush="Transparent">
@@ -53,6 +55,8 @@
             </StackPanel>
             
         </Grid>
+       
+
             <!-- Center Window BG -->
         <Grid Height="260" Width="760" HorizontalAlignment="Center" VerticalAlignment="Center">
 
@@ -63,6 +67,6 @@
             </Border>
 
         </Grid>
-            <Button Height="600" Width="1000" Opacity="0" Content="" Click="HandleClose" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Height="600" Width="1000" Opacity="0" Content="" Click="HandleClose" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </Page>
