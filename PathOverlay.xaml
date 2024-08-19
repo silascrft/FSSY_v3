@@ -1,72 +1,76 @@
 ﻿<Page x:Class="FSSY_v3.PathOverlay"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:FSSY_v3"
-      mc:Ignorable="d" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
       d:DesignHeight="600" d:DesignWidth="1000"
       Title="PathOverlay">
 
     <Grid>
-
-
         <!-- BG -->
         <Grid Height="600" Width="1000" Opacity="0.7">
-            <Border Height="600" Width="1000" Background="#1B2B32" CornerRadius="10" BorderBrush="Transparent"/>
+            <Border Height="600" Width="1000" Background="#1B2B32" CornerRadius="10" BorderBrush="Transparent" />
         </Grid>
-
-
 
         <!-- Path Boxen -->
         <Grid Height="260" Width="760" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1">
 
             <Border CornerRadius="10" Background="#2F3C40" BorderBrush="Transparent">
                 <Border.Effect>
-                    <DropShadowEffect BlurRadius="100" ShadowDepth="0" Opacity="0.5"/>
+                    <DropShadowEffect BlurRadius="100" ShadowDepth="0" Opacity="0.5" />
                 </Border.Effect>
             </Border>
-            
+
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="760">
 
                 <!-- Grid Column Layout -->
                 <UniformGrid x:Name="PathOverlayGrid" Columns="2" VerticalAlignment="Stretch" Height="240" Width="745">
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}"
+                                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12" />
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Game .exe Path" />
-                        <TextBox x:Name="GameExePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/game/pfad" ToolTip="toller/game/path"/>
+                        <TextBox x:Name="GameExePath" Style="{StaticResource OverlayPathTextBox}"
+                                 Text="toller/game/pfad" ToolTip="toller/game/path" />
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Click="HandleFolderSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFolderSelect" Style="{StaticResource PathFolderButton}"
+                                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12" />
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Cloud Drive Path" />
-                        <TextBox x:Name="CloudDrivePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/cloud/pfad" ToolTip="toller/cloud/path"/>
+                        <TextBox x:Name="CloudDrivePath" Style="{StaticResource OverlayPathTextBox}"
+                                 Text="toller/cloud/pfad" ToolTip="toller/cloud/path" />
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFileSelect" Style="{StaticResource PathFolderButton}"
+                                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12" />
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="FFS .exe Path" />
-                        <TextBox x:Name="FfsExePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/ffs/pfad" ToolTip="toller/ffs/path"/>
+                        <TextBox x:Name="FfsExePath" Style="{StaticResource OverlayPathTextBox}" Text="toller/ffs/pfad"
+                                 ToolTip="toller/ffs/path" />
                     </Grid>
                     <Grid Style="{StaticResource Overlay Grids}">
-                        <Button Click="HandleFolderSelect" Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                        <Button Click="HandleFolderSelect" Style="{StaticResource PathFolderButton}"
+                                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12" />
                         <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="Savegames Path" />
-                        <TextBox x:Name="SavegameDirPath" Style="{StaticResource OverlayPathTextBox}" Text="toller/savegame/pfad" ToolTip="toller/savegame/path"/>
+                        <TextBox x:Name="SavegameDirPath" Style="{StaticResource OverlayPathTextBox}"
+                                 Text="toller/savegame/pfad" ToolTip="toller/savegame/path" />
                     </Grid>
                 </UniformGrid>
             </StackPanel>
-            
-        </Grid>
-       
 
-            <!-- Center Window BG -->
+        </Grid>
+
+
+        <!-- Center Window BG -->
         <Grid Height="260" Width="760" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <Border CornerRadius="10" Background="#2F3C40" BorderBrush="Transparent">
                 <Border.Effect>
-                    <DropShadowEffect BlurRadius="100" ShadowDepth="0" Opacity="0.5"/>
+                    <DropShadowEffect BlurRadius="100" ShadowDepth="0" Opacity="0.5" />
                 </Border.Effect>
             </Border>
 
         </Grid>
-        <Button Height="600" Width="1000" Opacity="0" Content="" Click="HandleClose" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Height="600" Width="1000" Opacity="0" Content="" Click="HandleClose" HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
     </Grid>
 </Page>

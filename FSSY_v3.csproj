@@ -67,6 +67,8 @@
       <Resource Include="Assets\Buttons\Paths\Overlay\OtherPathsDefault.png" />
       <None Remove="Assets\Buttons\Paths\Overlay\OtherPathsHover.png" />
       <Resource Include="Assets\Buttons\Paths\Overlay\OtherPathsHover.png" />
+      <None Remove="Assets\WindowControllBG.png"/>
+      <Resource Include="Assets\WindowControllBG.png"/>
     </ItemGroup>
 
     <ItemGroup>
