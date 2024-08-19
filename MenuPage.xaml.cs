@@ -10,7 +10,7 @@ public partial class MenuPage : Page
 {
     private readonly MainWindow _mainWindow;
     private readonly SavegameStates _savegameStates;
-    private readonly PathOverlay _pathOverlay;
+    public readonly PathOverlay _pathOverlay;
 
     public MenuPage(MainWindow mainWindow)
     {
@@ -19,6 +19,7 @@ public partial class MenuPage : Page
         _savegameStates = new SavegameStates();
         _pathOverlay = new PathOverlay(this);
         LoadCheckBoxStates();
+        FirstSetupModal();
     }
 
     public void SaveStates()
@@ -135,7 +136,7 @@ public partial class MenuPage : Page
 
     private void HandlePaths(object sender, RoutedEventArgs e)
     {
-        _mainWindow.NavigateToPage(_mainWindow._pathsPage);
+        _mainWindow.NavigateToPage(_mainWindow.PathsPage);
     }
 
     private void HandleExit(object sender, RoutedEventArgs e)
@@ -146,5 +147,14 @@ public partial class MenuPage : Page
     private void HandleOpenModal(object sender, RoutedEventArgs e)
     {
         OpenModal();
+    }
+
+    private void FirstSetupModal()
+    {
+        if (!_mainWindow.Config.IsSetupFinished)
+        {
+            _mainWindow.Config.SetSetupFinished();
+            ModalFrame.Navigate(new FirstRunOverlay(this));
+        }
     }
 }

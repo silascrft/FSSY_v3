@@ -27,7 +27,7 @@ namespace FSSY_v3
             PathsManager.SaveOverlayPath(SavegameDirPath.Text, SavegameDirPath);
         }
 
-        private void FillPathElements()
+        public void FillPathElements()
         {
             FillPaths();
             FillToolTips();

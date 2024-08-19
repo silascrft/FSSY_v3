@@ -6,7 +6,6 @@ namespace FSSY_v3;
 
 public partial class PathsPage : Page
 {
-
     private readonly MainWindow _mainWindow;
 
     public PathsPage(MainWindow mainWindow)
@@ -25,7 +24,7 @@ public partial class PathsPage : Page
     {
         var uniformGrid = PathsGrid;
         var batchPaths = PathsManager.BatchPaths;
-        
+
         for (var i = 0; i < batchPaths.Count && i < uniformGrid.Children.Count; i++)
         {
             if (uniformGrid.Children[i] is PathGridItem pathGridItem)
@@ -37,7 +36,7 @@ public partial class PathsPage : Page
 
     private void HandleBack(object sender, RoutedEventArgs e)
     {
-        _mainWindow.NavigateToPage(_mainWindow._menuPage);
+        _mainWindow.NavigateToPage(_mainWindow.MenuPage);
         SavePaths();
     }
 }

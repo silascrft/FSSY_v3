@@ -1,13 +1,10 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using Newtonsoft.Json;
 
 namespace FSSY_v3.classes;
-
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.IO;
-using System.Windows.Controls.Primitives;
-
 
 public class PathsDto
 {
@@ -17,7 +14,8 @@ public class PathsDto
     public string FfsExePath { get; set; }
     public string SavegameDirectoryPath { get; set; }
 
-    public PathsDto(List<string> batchPaths, string gameExePath, string cloudDrivePath, string ffsExePath, string savegameDirectoryPath)
+    public PathsDto(List<string> batchPaths, string gameExePath, string cloudDrivePath, string ffsExePath,
+        string savegameDirectoryPath)
     {
         BatchPaths = batchPaths;
         GameExePath = gameExePath;
@@ -30,8 +28,8 @@ public class PathsDto
 public static class PathsManager
 {
     private static List<string> _batchPaths = [];
-    private static readonly string _folderPath = MainWindow.FolderPath;
-    private static readonly string _filePath  = Path.Combine(_folderPath, "paths.json");
+    public static readonly string FolderPath = MainWindow.FolderPath;
+    private static readonly string FilePath = Path.Combine(FolderPath, "paths.json");
     public static string GameExePath { get; private set; } = "";
     public static string CloudDrivePath { get; private set; } = "";
     public static string FfsExePath { get; private set; } = "";
@@ -47,15 +45,24 @@ public static class PathsManager
     {
         var pathsDto = new PathsDto(_batchPaths, GameExePath, CloudDrivePath, FfsExePath, SavegameDirectoryPath);
         var json = JsonConvert.SerializeObject(pathsDto, Formatting.Indented);
-        File.WriteAllText(_filePath, json);
+        File.WriteAllText(FilePath, json);
     }
 
     public static void LoadPathsFromFile()
     {
-        if (!File.Exists(_filePath)) return;
-        var json = File.ReadAllText(_filePath);
+        if (!File.Exists(FilePath)) return;
+        var json = File.ReadAllText(FilePath);
         var pathsDto = JsonConvert.DeserializeObject<PathsDto>(json);
         ChangeEveryPath(pathsDto);
+    }
+
+    public static void setAllPaths(String gameExe, String ffsExe, String savegames, String cloudDrive)
+    {
+        GameExePath = gameExe;
+        FfsExePath = ffsExe;
+        SavegameDirectoryPath = savegames;
+        CloudDrivePath = cloudDrive;
+        SavePathsToFile();
     }
 
     /// <summary>
@@ -74,13 +81,14 @@ public static class PathsManager
 
     public static void SaveBatchPaths(UniformGrid uniformGrid)
     {
-        if (!Directory.Exists(_folderPath))
+        if (!Directory.Exists(FolderPath))
         {
-            Directory.CreateDirectory(_folderPath);
+            Directory.CreateDirectory(FolderPath);
         }
 
         _batchPaths.Clear();
-        foreach (PathGridItem pathGridItem in uniformGrid.Children) {
+        foreach (PathGridItem pathGridItem in uniformGrid.Children)
+        {
             _batchPaths.Add(pathGridItem.PathText);
         }
 
