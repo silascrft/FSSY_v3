@@ -25,15 +25,15 @@
                 </Border.Effect>
             </Border>
 
-                <!-- Grid Column Layout -->
+            <!-- Grid Column Layout -->
 
-                <Grid Style="{StaticResource Overlay Grids}">
-                    <Button Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
-                    <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="FSSY Files Path" />
-                    <TextBox Style="{StaticResource OverlayPathTextBox}" Text="toller/game/pfad" ToolTip="toller/game/path"/>
-                </Grid>
+            <Grid Style="{StaticResource Overlay Grids}">
+                <Button Style="{StaticResource PathFolderButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 13 12"/>
+                <TextBlock Style="{StaticResource OverlayPathTextBlock}" Text="FSSY Files Path" />
+                <TextBox Style="{StaticResource OverlayPathTextBox}" Text="toller/game/pfad" ToolTip="toller/game/path"/>
+            </Grid>
 
-            
+
 
         </Grid>
         <!-- Center Window BG -->
@@ -46,11 +46,13 @@
             </Border>
 
         </Grid>
-        <StackPanel Height="40" Width="390" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 190 0 0" Orientation="Horizontal">
-                <UniformGrid>
-                <Button Style="{StaticResource Navigation}" FontSize="18" Height="20" Width="40" Margin="20 0 0 0">SKIP</Button>
-                <Button Style="{StaticResource Navigation}" FontSize="18" Height="20" Width="40" Margin="20 0 0 0">OK</Button>
-                </UniformGrid>
+        <StackPanel Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290 195 0 0" Orientation="Vertical">
+            <UniformGrid  >
+                <Button Style="{StaticResource Navigation}" FontSize="18" Height="25" Width="50">SKIP</Button>
+                <Button Style="{StaticResource Navigation}" FontSize="18" Height="25" Width="40">OK</Button>
+
+            </UniformGrid>
         </StackPanel>
+
     </Grid>
 </Page>

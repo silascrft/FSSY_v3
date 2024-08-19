@@ -334,35 +334,42 @@
         </Setter>
     </Style>
 
-    <!-- General navigation -->
     <Style x:Key="Navigation" TargetType="Button">
         <Setter Property="Panel.ZIndex" Value="10"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="Padding" Value="0,0,0,0"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="#00A8D9"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="FontFamily" Value="Exo 2"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <ContentPresenter HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   Margin="00,0,0,0"/>
+                        <Border x:Name="border" 
+                        BorderBrush="#00A8D9" 
+                        BorderThickness="2"
+                        CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="0,0.7,0,0"/>
+                        </Border>
                     </Grid>
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#00C5FF"/>
                             <Setter Property="Foreground" Value="#00C5FF"/>
                         </Trigger>
 
                         <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#C2F1FF"/>
                             <Setter Property="Foreground" Value="#C2F1FF"/>
                         </Trigger>
 
                         <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="BorderBrush" Value="Gray"/>
                             <Setter Property="Foreground" Value="Gray"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -370,6 +377,8 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
 
 
 
